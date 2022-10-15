@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Backend/server.js",
     "server": "nodemon Backend/server.js",
-    "client": "npm start --prefix"
+    "client": "npm start --prefix frontend", 
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+    
+
   },
   "author": "Johnson",
   "license": "MIT",
@@ -21,6 +24,7 @@
     "mongoose": "^6.6.5"
   },
   "devDependencies": {
+    "concurrently": "^7.4.0",
     "nodemon": "^2.0.20"
   }
 }
